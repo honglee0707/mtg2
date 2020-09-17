@@ -1,0 +1,130 @@
+
+# MTG2 version 2.02 (May/16)
+
+f90=ifort
+#MKLROOT=/opt/intel/composer_xe_2013.1.117/mkl
+#MKLROOT=/opt/intel/composer_xe_2013.5.192/mkl
+MKLROOT=/opt/intel/mkl
+
+mtg2:   hrtmx_2.o trf_rg.o trf.o sim_stp.o sim_real_sub.o sim_coal_sub.o sim_coal.o sim_coal_sub2.o sim_coal2.o me_.o pred_acc2.o pred_acc_m2.o fgz_sub.o aireml_mrrm_eig4-3.o aireml_mrrm_eig4.o aireml_mrrm2-3.o aireml_mrrm2.o var_rt_.o delta_.o delta_2.o snp_blup.o pdmx_2.o rtmx_2.o freq_vx.o inv.o chol.o matvec.o t2b_convert.o matmat.o bend3.o pca.o aireml_m_eig_aug.o aireml_m_eig4.o aireml_m_eig4-2.o aireml_m_eig_gwas.o aireml_rrm_eig.o  aireml_rrm4.o aireml_spl_eig2.o aireml_spl2.o aireml_rnm.o aireml_mrnm7.o aireml_mrnm7-2.o aireml_mcv6.o aireml_mcv6-2.o aireml_m_h7.o aireml_m_h7-2.o aireml_m_gwas.o aireml_m_gwas-2.o aireml_m_h2-rg.o aireml_m_h2-2-rg.o null_m_h1.o null_m_h1-2.o sub2_LDL10.o mtg2_main.o
+	$(f90) -o mtg2 -static -O3 -g -traceback hrtmx_2.o trf_rg.o trf.o sim_stp.o sim_real_sub.o sim_coal_sub.o sim_coal.o sim_coal_sub2.o sim_coal2.o me_.o pred_acc2.o pred_acc_m2.o fgz_sub.o aireml_mrrm_eig4-3.o aireml_mrrm_eig4.o aireml_mrrm2-3.o aireml_mrrm2.o var_rt_.o delta_.o delta_2.o snp_blup.o pdmx_2.o rtmx_2.o freq_vx.o inv.o chol.o matvec.o t2b_convert.o matmat.o bend3.o pca.o aireml_m_eig_aug.o aireml_m_eig4.o aireml_m_eig4-2.o aireml_m_eig_gwas.o aireml_spl_eig2.o aireml_rrm_eig.o aireml_rrm4.o aireml_spl2.o aireml_rnm.o aireml_mrnm7.o aireml_mrnm7-2.o aireml_mcv6.o aireml_mcv6-2.o aireml_m_h7.o aireml_m_h7-2.o aireml_m_gwas.o aireml_m_gwas-2.o aireml_m_h2-rg.o aireml_m_h2-2-rg.o null_m_h1.o null_m_h1-2.o sub2_LDL10.o mtg2_main.o $(MKLROOT)/lib/intel64/libmkl_blas95_ilp64.a $(MKLROOT)/lib/intel64/libmkl_lapack95_ilp64.a $(MKLROOT)/lib/intel64/libmkl_scalapack_ilp64.a -Wl,--start-group  $(MKLROOT)/lib/intel64/libmkl_intel_ilp64.a $(MKLROOT)/lib/intel64/libmkl_intel_thread.a $(MKLROOT)/lib/intel64/libmkl_core.a $(MKLROOT)/lib/intel64/libmkl_blacs_ilp64.a libcdflib.a -Wl,--end-group -liomp5 -lpthread -lm -lz -qopenmp -qopt-report5
+
+
+hrtmx_2.o:          hrtmx_2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays hrtmx_2.f90
+trf_rg.o:          trf_rg.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays trf_rg.f90
+trf.o:          trf.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays trf.f90
+sim_stp.o:          sim_stp.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_stp.f90
+sim_real_sub.o:          sim_real_sub.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_real_sub.f90
+sim_coal_sub.o:          sim_coal_sub.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_coal_sub.f90
+sim_coal.o:          sim_coal.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_coal.f90
+sim_coal_sub2.o:          sim_coal_sub2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_coal_sub2.f90
+sim_coal2.o:          sim_coal2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sim_coal2.f90
+me_.o:          me_.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays me_.f90
+pred_acc2.o:          pred_acc2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays pred_acc2.f90
+pred_acc_m2.o:          pred_acc_m2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays pred_acc_m2.f90
+fgz_sub.o:          fgz_sub.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays fgz_sub.f90
+aireml_mrrm_eig4-3.o:          aireml_mrrm_eig4-3.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_mrrm_eig4-3.f90
+	#$(f90) -c -g -traceback -i8 -heap-arrays aireml_mrrm_eig4-3.f90
+	#$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp -check bounds -check all -debug all aireml_mrrm_eig4-3.f90
+aireml_mrrm_eig4.o:          aireml_mrrm_eig4.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_mrrm_eig4.f90
+	#(f90) -c -g -traceback -i8 -heap-arrays aireml_mrrm_eig4.f90
+	#$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp -check bounds -check all -debug all aireml_mrrm_eig4.f90
+aireml_mrrm2-3.o:          aireml_mrrm2-3.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_mrrm2-3.f90
+	#$(f90) -c -g -traceback -i8 -heap-arrays aireml_mrrm2-3.f90
+aireml_mrrm2.o:          aireml_mrrm2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_mrrm2.f90
+	#$(f90) -c -g -traceback -i8 -heap-arrays aireml_mrrm2.f90
+var_rt_.o:          var_rt_.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays var_rt_.f90
+delta_.o:          delta_.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays delta_.f90
+delta_2.o:          delta_2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays delta_2.f90
+snp_blup.o:          snp_blup.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays snp_blup.f90
+pdmx_2.o:          pdmx_2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp pdmx_2.f90
+rtmx_2.o:          rtmx_2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp rtmx_2.f90
+freq_vx.o:          freq_vx.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays freq_vx.f90
+inv.o:          inv.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays inv.f90
+chol.o:          chol.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays chol.f90
+t2b_convert.o:          t2b_convert.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays t2b_convert.f90
+matvec.o:          matvec.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp matvec.f90
+matmat.o:          matmat.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp matmat.f90
+bend3.o:          bend3.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp bend3.f90
+pca.o:          pca.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays pca.f90
+aireml_m_h7.o:          aireml_m_h7.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_m_h7.f90
+aireml_m_gwas.o:          aireml_m_gwas.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_gwas.f90
+aireml_m_gwas-2.o:          aireml_m_gwas-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_gwas-2.f90
+	#$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp -check bounds -check all -debug all aireml_m_gwas.f90
+aireml_spl_eig2.o:          aireml_spl_eig2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_spl_eig2.f90
+aireml_spl2.o:          aireml_spl2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_spl2.f90
+aireml_rnm.o:          aireml_rnm.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_rnm.f90
+aireml_mrnm7.o:          aireml_mrnm7.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_mrnm7.f90
+aireml_mrnm7-2.o:          aireml_mrnm7-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_mrnm7-2.f90
+aireml_mcv6.o:          aireml_mcv6.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_mcv6.f90
+aireml_mcv6-2.o:          aireml_mcv6-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_mcv6-2.f90
+aireml_rrm4.o:          aireml_rrm4.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_rrm4.f90
+aireml_m_eig_aug.o:          aireml_m_eig_aug.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_eig_aug.f90
+aireml_m_eig4.o:          aireml_m_eig4.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_eig4.f90
+aireml_m_eig4-2.o:          aireml_m_eig4-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_eig4-2.f90
+aireml_m_eig_gwas.o:          aireml_m_eig_gwas.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_eig_gwas.f90
+aireml_rrm_eig.o:          aireml_rrm_eig.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_rrm_eig.f90
+aireml_m_h7-2.o:          aireml_m_h7-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -qopenmp aireml_m_h7-2.f90
+aireml_m_h2-rg.o:          aireml_m_h2-rg.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_h2-rg.f90
+aireml_m_h2-2-rg.o:          aireml_m_h2-2-rg.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays aireml_m_h2-2-rg.f90
+null_m_h1.o:          null_m_h1.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays null_m_h1.f90
+null_m_h1-2.o:          null_m_h1-2.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays null_m_h1-2.f90
+sub2_LDL10.o:        sub2_LDL10.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays sub2_LDL10.f90
+mtg2_main.o:        mtg2_main.f90
+	$(f90) -c -O3 -g -traceback -i8 -heap-arrays -assume byterecl mtg2_main.f90
+
+
+
