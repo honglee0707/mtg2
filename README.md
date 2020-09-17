@@ -1,2 +1,4 @@
 # mtg2
 Multi Trait GREML 
+MTG is a computer program to provide Genomic Residual Maximum Likelihood (GREML) estimates for genetic and environmental variance and covariance across multiple traits. The program implements a multivariate linear mixed model and can fit complex covariance structures that can be derived from genomic information, i.e. multivariate version of GCTA GREML. The program also provides best liner unbiased prediction (BLUP) of additive genetic effects; either breeding values or predictions of genetic risk. MTG uses the direct average information algorithm (Lee and van der Werf; Genet Sel Evol 2006; 38:25-43). For more details of GREML and GBLUP, please see
+Maier, R., et al. (2015) Joint analysis of psychiatric disorders increases accuracy of risk prediction for schizophrenia, bipolar disorder and major depression disorder. The American Journal of Human Genetics 96,283-294
